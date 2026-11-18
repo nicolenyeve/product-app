@@ -15,7 +15,7 @@ public class ProductApp extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(4, 2, 10, 10));
 
-        // Menu - Q2.4
+        
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("File");
         JMenuItem processItem = new JMenuItem("Process");
@@ -27,7 +27,7 @@ public class ProductApp extends JFrame {
         menuBar.add(fileMenu);
         setJMenuBar(menuBar);
 
-        // Form - Q2.2
+      
         add(new JLabel("Customer Name:"));
         txtCustomer = new JTextField();
         add(txtCustomer);
@@ -43,7 +43,7 @@ public class ProductApp extends JFrame {
         btnProcess = new JButton("PROCESS");
         add(btnProcess);
 
-        // Actions
+        
         btnProcess.addActionListener(e -> processSale());
         processItem.addActionListener(e -> processSale());
 
@@ -75,7 +75,7 @@ public class ProductApp extends JFrame {
 
             JOptionPane.showMessageDialog(this, message);
 
-            // Save to data.txt - Q2.3
+            
             try (FileWriter writer = new FileWriter("data.txt", true)) {
                 writer.write("*********************************************\n");
                 writer.write("DATA LOG\n");
